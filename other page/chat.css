@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+}
+main{
+    width: 65vw;
+    height: 560px;
+    margin: 30px 225px 0 225px;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border: 10px solid aqua;
+    border-left: none;
+}
+img{
+    width: 4.5vw;
+    border-radius: 50px;
+}
+#conversation{
+    background-color: white;
+}
+li a{
+    text-decoration: none;
+    color: aqua;
+    font-size: 1.6vw;
+}
+li{
+    margin-left: 0.5vw;
+    width: 17vw;
+    height: 30px;
+    list-style: none;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+#discussion{
+    text-align: center;
+}
+#recherche{
+    width: 90%;
+    height: 50px;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 50px;
+    border: 2px double rgb(255, 255, 255);
+    caret-color: rgb(0, 150, 150);
+    font-size: 1.5vw;
+    padding-left: 5px;
+    background-image: url('../logo/bandicam\ 2023-11-13\ 20-44-48-429.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 2vw;
+    background-position-x: 90%;
+    animation: search 0.4s forwards;
+}
+@keyframes search {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px)
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+::placeholder{
+    font-size: 2vw;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    color: rgb(0, 150, 150);
+    text-align: center;
+    font-weight: bold;
+}
+#nouveau-discussion{
+    height: 280px;
+    overflow: auto;
+}
+#nouveau-discussion::-webkit-scrollbar{
+    width: 0;
+}
+#message-users{
+    background-color: white;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    margin-left: 15px;
+    animation: msg-users 0.4s forwards;
+}
+@keyframes msg-users {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#message-users:hover{
+    cursor: grab;
+    background-color: rgb(255, 28, 198);
+}
+#hover-msg{
+    padding: 4px 5px 5px 4px;
+    border-radius: 12px;
+}
+@keyframes hover {
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: rgb(255, 28, 198);
+    }
+}
+#date{
+    font-size: 0.8vw;
+    letter-spacing: -1px;
+    margin-right: -10vw;
+    color: rgb(0, 150, 150);
+}
+#message-users section{
+    display: inline-block;
+    margin-left: -2vw;
+}
+#message-users img{
+   margin-top: 10px;
+}
+.msg-non-lus{
+    text-align: left;
+    width: 15vw;
+    height: 23px;
+    overflow: hidden;
+    font-size: 1.3vw;
+    margin-left: 2vw;
+}
+#actif{
+    margin-right: -2vw;
+    float: right;
+    background-color: rgb(51, 255, 0);
+    border-radius: 100px;
+    color: rgb(51, 255, 0);
+}
+.compte-deconnexion section{
+    display: flex;
+    margin: 27px 20px 0 20px;
+}
+.compte-deconnexion p{
+    width: 13vw;
+    margin-right: 2vw;
+    font-size: 1.1vw;
+    color: white;
+    font-weight: bold;
+}
+.compte-deconnexion h3{
+    text-align: left;
+    margin-bottom: 15px;
+    text-decoration: underline double;
+    font-size: 1.7vw;
+}
+.compte-deconnexion img{
+    width: 5vw;
+    border: 4px solid rgb(255, 28, 198);
+    border-radius: 0;
+}
+.compte-deconnexion input{
+    width: 40vw;
+    height: 40px;
+    background-color: aqua;
+    border: 1px solid  rgb(255, 28, 198);
+    border-radius: 10px;
+    font-size: 1.7vw;
+    color: white;
+    transition: 0.3s ease;
+    font-weight: 800;
+    cursor: grab;
+    background-color: aqua;
+    background-image: linear-gradient(0deg, aqua,  rgb(255, 28, 198));
+}
+.compte-deconnexion input:hover{
+    color: rgb(255, 28, 198);
+    box-shadow: 4px 4px 1px;
+}
+
+
+
+.head-conversation{
+    height: 70px;
+    padding: 5px 1vw;
+}
+.head-conversation-user{
+    margin:0 0 15px 0.5vw;
+    color: rgb(255, 28, 198);
+    font-size: 20px;
+    font-weight: bold;
+}
+.img-user img{
+    width: 12%;
+}
+.logo i{
+    opacity: 0.7;
+    transition: 0.3s ease;
+    animation: logo 0.6s forwards;
+    float: right;
+    font-size: 3.5vw;
+    color: aqua;
+}
+@keyframes logo {
+    0%{
+        opacity: 0;
+       transform: translateX(25px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#message-de-discussion{
+    width: auto;
+    height: 390px;
+    overflow: auto;
+    border-bottom: 3px solid aqua ;
+    border-top: 5px solid aqua;
+    padding: 5px 0;
+}
+#message-de-discussion::-webkit-scrollbar{
+background-color: rgb(255, 255, 255);
+}
+
+#message-de-discussion-users{
+    border:3px solid aqua;
+    width: 27vw;
+    height: auto;
+    float: left;
+    padding: 10px 5px;
+    border-top-left-radius: 30px;
+    margin: 10px 10px;
+    cursor: grab;
+    animation: Apparition-msg-users 0.2s forwards;
+}
+@keyframes Apparition-msg-users {
+    0%{
+        transform: translateX(-60px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#vous , #autre-user{
+    color: aqua;
+}
+#message-de-discussion-vous{
+    border:3px solid aqua;
+    width: 25vw;
+    margin: 10px 10px;
+    box-sizing:content-box;
+    float: right;
+    padding: 10px 5px;
+    border-top-left-radius: 30px;
+    cursor: grab;
+    word-wrap: break-word;
+    animation: Apparition-msg-vous 0.2s forwards;
+}
+@keyframes  Apparition-msg-vous{
+    0%{
+        transform: translateX(60px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#message-autre-users{
+   width: 26vw;
+   height: auto;
+   padding-left: 2px;
+   box-sizing: content-box;
+   word-wrap: break-word;
+}
+#message-vous{
+    width: 26vw;
+    height: auto;
+    padding-left: 2px;
+    box-sizing: content-box;
+}
+#partie-envoie{
+    display: grid;
+    grid-template-columns: 74% 13% 13%;
+}
+#input-envoie{
+   height: 50px;
+   width: 100%;
+   outline: none;
+   border: 2px solid aqua;
+   font-size: 1.7vw;
+   color: rgb(0, 150, 150);
+   padding-left: 3px;
+}
+
+.fa-heart{
+    height: 100%;
+    width: 100%;
+    border: 5px solid aqua;
+    border-bottom: 0;
+    font-size: 4vw;
+    text-align:center;
+    color: rgb(255, 28, 198);
+    cursor: grab;
+    transition: 0.2s ease;
+    background-color: aqua;
+}
+.fa-heart:hover{
+    font-size: 4.5vw;
+}
+.fa-paper-plane{
+    height: 100%;
+    width: 100%;
+    border: 5px solid aqua;
+    border-bottom: 0;
+    font-size: 4vw;
+    text-align:center;
+    color: aqua;
+    cursor: grab;
+    transition: 0.2s ease;
+}
+.fa-paper-plane:hover{
+    font-size: 4.5vw;
+}
+.fa-trash-alt{
+    float: right;
+    color: rgb(255, 28, 198);
+}
+.fa-trash-alt .suprr{
+    visibility: hidden;
+    z-index: 1;
+}
+.fa-trash-alt:hover .suprr{
+    visibility: visible;
+}
+.suprr{
+    background-color: rgb(255, 28, 198);
+    padding: 2px;
+    font-size: 0.8vw;
+    position: absolute;
+    right: 30px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+@media screen and (max-width: 700px) {
+   body{
+    overflow: hidden;
+   } 
+   main{
+        margin: 0;
+        width: 98vw;
+        height: 60%;
+        padding: 0;
+    }
+    ::placeholder{
+        font-size: 3.5vw;
+    }
+    #recherche{
+        background-size: 3vw;
+    }
+    #message-users{
+        height: 100px;
+        margin-left: 10px;
+    }
+    #message-users img{
+        width: 50px;
+        margin: 0;
+        margin-right: 2px;
+    }
+    #message-users h3{
+        font-size: 12px;
+    }
+    .msg-non-lus{
+        height: 3vw;
+        font-size: 13px;
+    }
+    #nouveau-discussion{
+        height: 400px;
+    }
+    #date{
+        font-size: 10px;
+    }
+    .compte-deconnexion p{
+        font-size: 13px;
+    }
+    .compte-deconnexion h3{
+        font-size: 15px;
+    }
+    #message-de-discussion{
+        height: 476px;
+    }
+    #message-autre-users , #message-vous{
+        width: 100%;
+    }
+    #message-de-discussion-users , #message-de-discussion-vous{
+        width: 220px;
+    }
+    ::placeholder{
+        font-size: 15px;
+    }
+    .suprr{
+        font-size: 8px;
+    }
+    .head-conversation{
+      margin-top: 10px;
+    }
+    .compte-deconnexion input{
+        font-size: 20px;
+        padding: 2px 6px;
+        margin-left: -6px !important;
+    }
+}
+@media screen and (max-width: 490px)  {
+    main{
+        width: 100%;
+        height: 100%;
+        display:contents;
+    }
+    #conversation{
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+    .fa-heart{
+        height: 100%;
+        width: 90%;
+        font-size: 40px;
+        margin: 0;
+        border-top: none;
+    }
+    .fa-paper-plane{
+        height: 90%;
+        width: 90%;
+        border-bottom: 2px solid aqua;
+        font-size: 40px;
+    }
+    #discussion{
+        background-color: aqua;
+        padding-top: 10px;
+    }
+    #recherche{
+        background-size: 30px;
+    }
+    ::placeholder{
+        font-size: 30px;
+    }
+    #nouveau-discussion{
+        height: 350px;
+    }
+    #message-users {
+        width: 95%;
+        text-align: left;
+        padding-left: 10px;
+    }
+    #message-users h3{
+        font-size: 25px;
+    }
+    .msg-non-lus{
+        height: 25px;
+        width: 60px;
+        font-size: 20px;
+    }
+    .compte-deconnexion div img{
+        width: 60px;
+        float: right;
+    }
+    .compte-deconnexion p{
+        font-size: 20px;
+    }
+    .compte-deconnexion input{
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+}

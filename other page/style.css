@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: tahoma;
+}
+body{
+    overflow: hidden;
+}
+main{
+    background-color: aqua;
+    box-shadow: 8px 10px 2px rgb(187, 210, 219);
+    padding: 5px 20px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    transition: 1s ease;
+    animation: appartchargement2 8s forwards;
+}
+@keyframes appartchargement2 {
+    0%{
+       opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.user i{
+   font-size: 100px;
+   position: relative;
+   left: 40%;
+   margin: 5px 0;
+   color: rgb(255, 28, 198);
+}
+#alerte{
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    margin-bottom: -5px;
+}
+#btn{
+  font-size: 35px;
+  border: 1px solid rgb(255, 28, 198);
+  background-image: linear-gradient(0deg, aqua,  rgb(255, 28, 198));
+  width: 405px;
+  transition: 0.3s ease;
+  cursor: grab;
+  color: white;
+  border-radius: 15px;
+}
+#btn:hover{
+    background-color: rgb(106, 228, 181);
+    box-shadow: 2px 4px 2px rgb(255, 28, 198);
+    color: rgb(255, 28, 198);
+}
+input[type="email"]{
+    outline: none;
+    width: 410px;
+    height:  43px;
+    margin-bottom: 3vh;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 5px;
+}
+::placeholder{
+    color: rgb(242, 129, 255);
+    opacity: 0.4;
+    font-style: italic;
+    letter-spacing: 0.2vw;
+    font-size: 15px;
+}
+input[type="password"]{
+    outline: none;
+    width: 410px;
+    height:  43px;
+    margin-bottom: 3vh;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 5px;
+}
+label{
+    font-size: 28px;
+    color: rgb(255, 28, 198);
+}
+.ligne-separation{
+    margin: 3vh 2vw;
+    border: 1px solid rgb(255, 255, 255) !important;
+}
+#btn-creation-compte{
+    text-align: center;
+}
+#btn-creation-compte a{
+    text-decoration: none;
+    font-size: 1vw;
+}
+#btn-creation-compte a:hover{
+    text-decoration-line:  underline;
+    text-decoration-style: wavy;
+    cursor: grab;
+}
+h1{
+    text-shadow: 8px 10px 2px rgb(187, 210, 219);
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+form{
+    animation: apparition .4s ease;
+}
+@keyframes apparition {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.bulles{
+    position:absolute;
+    border-radius: 200px;
+    background-color: rgb(106, 228, 181);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    animation: bulle 5s forwards;
+    z-index: -1;
+}
+@keyframes bulle {
+    from{
+        filter: hue-rotate(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        filter: hue-rotate(720deg);
+        transform: translateY(-500px);
+        opacity: 0;
+        left: var(--left);
+    }
+}
+#alerte-email{
+transition: 0.4s ease;
+margin-top: -20px;
+margin-left: 5px;
+color: red;
+visibility: hidden;
+font-size: 1vw;
+}
+#bar-mdp{
+    transition: 0.4s ease;
+    width: 20%;
+    margin-top: -18px;
+    border: 2px solid red; 
+    visibility: hidden;
+} 
+.nom-auteur{
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    font-style: italic;
+    font-size: small;
+}
+#alerte-mdp{
+    transition: 0.4s ease;
+    color: red;
+    font-size: 1vw;
+    z-index: 1;
+    }
+
+
+
+
+
+
+#chargement-debut{
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 35%;
+    transition: 0.3 ease;
+    animation: appartchargement 5s forwards;
+}
+@keyframes appartchargement {
+    0%{
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+    .span img{
+        width: 100px;
+        opacity: 1;
+        transition: .5s;
+        animation: slide 1.3s infinite;
+        animation-delay: calc(.3s * var(--b));
+        margin-right: 10px;
+        border-radius: 50px;
+    }
+    @keyframes slide {
+        to{
+            opacity: 0.08;
+        }
+    }
+    .h1{
+        text-align: center;
+        color: rgb(255, 28, 198);
+        letter-spacing: 0.7 vw;
+        animation: load .3s forwards ;
+        transition: 0.3s ease;
+    }
+    
+    @keyframes load {
+        from{
+            transform:translateY(-5vw)
+        }
+        to{
+           transform:translateY(0)  
+        }
+    }
+
+
+
+    @media screen and (max-width : 600px) {
+        main{
+            top: 10vw;
+            left: 5vw;
+        }
+        #btn-creation-compte a{
+        font-size: 15px;
+        }
+        #chargement-debut{
+            left: 10%;
+        }
+    }

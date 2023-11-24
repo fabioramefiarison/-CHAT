@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#message-de-discussion{
+    width: auto;
+    height: 390px;
+    overflow: auto;
+    border-bottom: 3px solid aqua ;
+    border-top: 5px solid aqua;
+    padding: 5px 0;
+}
+#message-de-discussion::-webkit-scrollbar{
+background-color: rgb(255, 255, 255);
+}
+
+#message-de-discussion-users{
+    border:3px solid aqua;
+    width: 80vw;
+    height: auto;
+    float: left;
+    padding: 10px 5px;
+    border-top-left-radius: 30px;
+    margin: 10px 10px;
+    cursor: grab;
+    animation: Apparition-msg-users 0.2s forwards;
+    font-size: 3vw;
+}
+@keyframes Apparition-msg-users {
+    0%{
+        transform: translateX(-60px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#vous , #autre-user{
+    color: aqua;
+}
+#message-de-discussion-vous{
+    border:3px solid aqua;
+    width: 80vw;
+    margin: 10px 10px;
+    box-sizing:content-box;
+    float: right;
+    padding: 10px 5px;
+    border-top-left-radius: 30px;
+    cursor: grab;
+    word-wrap: break-word;
+    animation: Apparition-msg-vous 0.2s forwards;
+    font-size: 3vw;font-size: 3vw;
+}
+@keyframes  Apparition-msg-vous{
+    0%{
+        transform: translateX(60px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#message-autre-users{
+   width: 70vw;
+   height: auto;
+   padding-left: 2px;
+   box-sizing: content-box;
+   word-wrap: break-word;
+}
+#message-vous{
+    width: 70vw;
+    height: auto;
+    padding-left: 2px;
+    box-sizing: content-box;
+}
+.fa-trash-alt{
+    float: right;
+    color: rgb(255, 28, 198);
+}
+.fa-trash-alt .suprr{
+    visibility: hidden;
+}
+.fa-trash-alt:hover .suprr{
+    visibility: visible;
+}
+.suprr{
+    background-color: rgb(255, 28, 198);
+    padding: 2px;
+    font-size: 4vw;
+    position: absolute;
+    right: 30px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+#date{
+    font-size: 1vw;
+    letter-spacing: -1px;
+    margin-right: -10vw;
+    color: rgb(0, 150, 150);
+}
